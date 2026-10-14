@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST FOOD KG — Даамдуу фастфуд</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER (Эң жогоруда туруктуу турат) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">FAST FOOD <span>KG</span></a>
+            <nav class="nav">
+                <a href="#hero">Башкы бет</a>
+                <a href="#menu">Меню</a>
+                <a href="about.html">Биз жөнүндө</a>
+                <a href="#constructor">Конструктор</a>
+            </nav>
+            <div class="header-right">
+                <button class="cart-btn" id="cartOpenBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Корзина</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Даамдуу фастфуд — маанайыңды көтөр!</h1>
+                <p>Жаңы даярдалган бургерлер, ширелүү шаурма, ысык рамен жана кытырак крылышкилер.</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn btn-primary">Менюну көрүү</a>
+                    <a href="#menu" class="btn btn-outline">Заказ берүү</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80" alt="Burger">
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Биздин <span>Меню</span></h2>
+            
+            <!-- ИЗДӨӨ ТИЛКЕСИ -->
+            <div class="search-container" style="max-width: 400px; margin: 0 auto 30px auto;">
+                <input type="text" id="searchInput" placeholder="Тамактын атын жазып издеңиз..." style="width: 100%; padding: 12px 20px; border-radius: 30px; border: 1px solid #333; background-color: #1a1a1a; color: white; font-size: 15px; outline: none; transition: 0.3s;">
+            </div>
+
+            <!-- Категориялар -->
+            <div class="categories">
+                <button class="cat-btn active" data-category="all">Баары</button>
+                <button class="cat-btn" data-category="burger">🍔 Бургерлер</button>
+                <button class="cat-btn" data-category="shaurma">🌯 Шаурма</button>
+                <button class="cat-btn" data-category="ramen">🍜 Рамен</button>
+                <button class="cat-btn" data-category="wings">🍗 Крылышки</button>
+            </div>
+
+            <!-- Продукттар карточкалары -->
+            <div class="products-grid" id="productsGrid">
+                <!-- JS аркылуу толтурулат -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOD CONSTRUCTOR SECTION -->
+    <section class="constructor-section" id="constructor" style="padding: 60px 0; background-color: #161616; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; margin-bottom: 40px;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 32px; font-weight: 800; margin-bottom: 10px;">🛠️ Өз <span style="color: #ffcc00;">Шедевриңди</span> Жарат!</h2>
+            <p style="color: #aaa; text-align: center; margin-bottom: 40px;">Төмөнкү ингредиенттерди тандап, өзүң каалаган идеалдуу бургерди кураштыр.</p>
+            
+            <div class="constructor-wrapper" style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+                
+                <!-- Ингредиенттерди тандоо панели -->
+                <div class="ingredients-panel" style="flex: 1; min-width: 300px; background-color: #1a1a1a; padding: 25px; border-radius: 16px; border: 1px solid #2a2a2a;">
+                    <h3 style="font-size: 20px; margin-bottom: 20px; color: #fff;">Ингредиенттерди тандаңыз:</h3>
+                    <div id="ingredientsList" style="display: flex; flex-direction: column; gap: 10px;">
+                        <!-- Ингредиенттер script.js аркылуу ушул жерге толук тизилет -->
+                    </div>
+                </div>
+
+                <!-- Визуалдык натыйжа жана баа -->
+                <div class="result-panel" style="flex: 1; min-width: 300px; background-color: #1a1a1a; padding: 25px; border-radius: 16px; border: 1px solid #2a2a2a; text-align: center;">
+                    <h3 style="font-size: 20px; margin-bottom: 20px; color: #fff;">Сиздин Бургер:</h3>
+                    <div id="burgerVisual" style="min-height: 120px; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div style="font-size: 40px;">🍔</div>
+                    </div>
+                    <div style="font-size: 22px; font-weight: 700; color: #ffcc00; margin-bottom: 20px;">
+                        Жалпы баасы: <span id="constructorPrice">150</span> сом
+                    </div>
+                    <button id="addCreatedToCartBtn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 16px; cursor: pointer;">Корзинага кошуу 🛒</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BONUS WHEEL SECTION -->
+    <section class="bonus-section" style="padding: 60px 0; background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%); text-align: center; margin-bottom: 40px;">
+        <div class="container" style="max-width: 600px;">
+            <h2 style="font-size: 30px; font-weight: 800; margin-bottom: 10px;">🎁 Бактылуу <span style="color: #ffcc00;">Бонус Дөңгөлөгү</span></h2>
+            <p style="color: #aaa; font-size: 14px; margin-bottom: 25px;">Дөңгөлөктү айлантып, заказыңызга арзандатуу же белек утуп алыңыз!</p>
+            
+            <div class="wheel-box" style="background-color: #1a1a1a; padding: 30px; border-radius: 20px; border: 2px dashed #ffcc00; display: inline-block; width: 100%;">
+                <div id="wheelResult" style="font-size: 20px; font-weight: 700; color: #ffcc00; margin-bottom: 20px; min-height: 30px;">
+                    Клик басып сыноону баштаңыз!
+                </div>
+                <button id="spinBtn" class="btn btn-primary" style="font-size: 16px; padding: 12px 30px; cursor: pointer;">Дөңгөлөктү айлантуу 🎡</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CART (КОРЗИНА) -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Сиздин Корзина</h3>
+                <button class="close-cart" id="cartCloseBtn">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Корзина товарлары -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Жалпы сумма:</span>
+                    <strong id="cartTotalPrice">0 сом</strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-danger" id="clearCartBtn">Тазалоо</button>
+                    <button class="btn btn-success" id="checkoutBtn">Заказ кылуу</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST -->
+    <div class="toast" id="toast">Товар корзинага кошулду!</div>
+
+    <!-- JS файлы -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биз жөнүндө — FAST FOOD KG</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Стиль файлы -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">FAST FOOD <span>KG</span></a>
+            <nav class="nav">
+                <a href="index.html">Башкы бет</a>
+                <a href="index.html#menu">Меню</a>
+                <a href="about.html" style="color: #ffcc00;">Биз жөнүндө</a>
+                <a href="index.html#contact">Байланыш</a>
+            </nav>
+            <div class="header-right">
+                <button class="cart-btn" id="cartOpenBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Корзина</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT HERO SECTION -->
+    <section class="about-hero" style="padding-top: 140px; padding-bottom: 60px; background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%); text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 42px; font-weight: 800; margin-bottom: 15px;">Биздин <span>Тарых</span> жана Максат</h1>
+            <p style="color: #aaa; font-size: 18px; max-width: 700px; margin: 0 auto;">FAST FOOD KG — бул жөн гана фастфуд эмес, бул ар бир тиштегенде маанайыңызды көтөрүүчү жогорку сапаттагы даам дүйнөсү.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT MAIN CONTENT -->
+    <section class="about-content-section" style="padding: 60px 0;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 60px;">
+            
+            <!-- 1-бөлүк: Биз кимбиз? -->
+            <div class="about-grid" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=80" alt="Restaurant" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 30px; margin-bottom: 20px; font-weight: 700;">Биздин <span style="color: #ffcc00;">Башкы Максатыбыз</span></h2>
+                    <p style="color: #bbb; line-height: 1.6; margin-bottom: 15px;">
+                        FAST FOOD KG 2023-жылы түзүлүп, кыска убакыттын ичинде шаарыбыздын эң сүйүктүү фастфуд түйүндөрүнүн бирине айланды. Биздин негизги максатыбыз — кардарларыбызга эң даамдуу бургерлерди, ширелүү шаурмаларды, ысык рамендерди жана кыртырак крылышкилерди таза, сапаттуу жана тез жеткирүү.
+                    </p>
+                    <p style="color: #bbb; line-height: 1.6;">
+                        Ар бир тамак заманбап санитардык талаптарга толук жооп берип, атайын тажрыйбалуу ашпозчулар тарабынан жапжаңы азыктардан даярдалат.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2-бөлүк: Артыкчылыктар карталары -->
+            <div class="features-section">
+                <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px; font-weight: 700;">Эмне үчүн <span style="color: #e50914;">Бизди Тандашат?</span></h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    
+                    <div style="background-color: #1a1a1a; padding: 30px; border-radius: 16px; border: 1px solid #2a2a2a; text-align: center;">
+                        <i class="fa-solid fa-seedling" style="font-size: 40px; color: #ffcc00; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 20px; margin-bottom: 10px;">Жаңы жана таза азыктар</h3>
+                        <p style="color: #888; font-size: 14px;">Күн сайын түздөн-түз ишенимдүү жеткирүүчүлөрдөн гана жарым фабрикат эмес, сапаттуу каражаттар алынат.</p>
+                    </div>
+
+                    <div style="background-color: #1a1a1a; padding: 30px; border-radius: 16px; border: 1px solid #2a2a2a; text-align: center;">
+                        <i class="fa-solid fa-bolt" style="font-size: 40px; color: #e50914; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 20px; margin-bottom: 10px;">Тез даярдоо жана жеткирүү</h3>
+                        <p style="color: #888; font-size: 14px;">Заказыңыз түшкөн замат ашпозчулар ишке киришип, ысык бойдон сизге жеткирүүгө аракет кылышат.</p>
+                    </div>
+
+                    <div style="background-color: #1a1a1a; padding: 30px; border-radius: 16px; border: 1px solid #2a2a2a; text-align: center;">
+                        <i class="fa-solid fa-face-smile" style="font-size: 40px; color: #ffcc00; margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 20px; margin-bottom: 10px;">Жеткиликтүү баалар</h3>
+                        <p style="color: #888; font-size: 14px;">Ар бир кардардын капчыгына ылайыктуу сонун баалар жана даамдуу бонус-акциялар.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #1a1a1a; padding: 40px 0; border-top: 1px solid #2a2a2a; text-align: center; margin-top: 40px;">
+        <div class="container">
+            <p style="color: #777; font-size: 14px;">© 2026 FAST FOOD KG. Бардык укуктар корголгон.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL CART (КОРЗИНА) -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Сиздин Корзина</h3>
+                <button class="close-cart" id="cartCloseBtn">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Жалпы сумма:</span>
+                    <strong id="cartTotalPrice">0 сом</strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-danger" id="clearCartBtn">Тазалоо</button>
+                    <button class="btn btn-success" id="checkoutBtn">Заказ кылуу</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Логика үчүн script.js файлы (корзина бардык беттерде бирдей иштеши үчүн) -->
+    <script src="script.js"></script>
+    <!-- STATS SECTION -->
+<section class="stats-section" style="padding: 50px 0; background-color: #161616; border-top: 1px solid #222; border-bottom: 1px solid #222; margin: 40px 0;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+        <div>
+            <h2 class="counter" data-target="15000" style="font-size: 38px; color: #ffcc00; font-weight: 800; margin-bottom: 5px;">0</h2>
+            <p style="color: #888; font-size: 14px;">Бактылуу кардарлар</p>
+        </div>
+        <div>
+            <h2 class="counter" data-target="25" style="font-size: 38px; color: #e50914; font-weight: 800; margin-bottom: 5px;">0</h2>
+            <p style="color: #888; font-size: 14px;">Даамдуу меню түрлөрү</p>
+        </div>
+        <div>
+            <h2 class="counter" data-target="5" style="font-size: 38px; color: #ffcc00; font-weight: 800; margin-bottom: 5px;">0</h2>
+            <p style="color: #888; font-size: 14px;">Жылдык тажрыйба</p>
+        </div>
+        <div>
+            <h2 class="counter" data-target="100" style="font-size: 38px; color: #e50914; font-weight: 800; margin-bottom: 5px;">0</h2>
+            <p style="color: #888; font-size: 14px;">Табигый сапат %</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
